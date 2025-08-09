@@ -1,0 +1,25 @@
+//greatest prime factor of given number.
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int no=sc.nextInt();
+        int prime=2;
+        while(no>1){
+            while(no%prime==0){
+                no=no/prime;
+            }
+            if(no>1)
+                prime++;
+        }
+        System.out.println(prime);
+    }
+}
